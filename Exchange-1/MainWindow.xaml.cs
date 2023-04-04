@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Exchange_1
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -29,6 +26,23 @@ namespace Exchange_1
         {
             MainMenu.Visibility = Visibility.Hidden;
             RegistrMenu.Visibility = Visibility.Visible;
+        }
+
+        private void logo_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenu.Visibility = Visibility.Visible;
+            RegistrMenu.Visibility = Visibility.Hidden;
+        }
+
+        private void logo1_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MainMenu.Visibility = Visibility.Visible;
+            RegistrMenu.Visibility = Visibility.Hidden;
+        }
+
+        private void Reg_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
