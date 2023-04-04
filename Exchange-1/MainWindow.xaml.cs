@@ -26,23 +26,42 @@ namespace Exchange_1
         {
             MainMenu.Visibility = Visibility.Hidden;
             RegistrMenu.Visibility = Visibility.Visible;
+            RegisMenu.Visibility = Visibility.Hidden;
         }
 
         private void logo_Click(object sender, RoutedEventArgs e)
         {
             MainMenu.Visibility = Visibility.Visible;
             RegistrMenu.Visibility = Visibility.Hidden;
+            RegisMenu.Visibility = Visibility.Hidden;
         }
 
         private void logo1_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             MainMenu.Visibility = Visibility.Visible;
             RegistrMenu.Visibility = Visibility.Hidden;
+            RegisMenu.Visibility = Visibility.Hidden;
         }
 
         private void Reg_Click(object sender, RoutedEventArgs e)
         {
+            MainMenu.Visibility = Visibility.Hidden;
+            RegistrMenu.Visibility = Visibility.Hidden;
+            RegisMenu.Visibility = Visibility.Visible;  
+        }
 
+        private void logo2_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenu.Visibility = Visibility.Visible;
+            RegistrMenu.Visibility = Visibility.Hidden;
+            RegisMenu.Visibility = Visibility.Hidden;
+        }
+
+        private void logo3_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MainMenu.Visibility = Visibility.Visible;
+            RegistrMenu.Visibility = Visibility.Hidden;
+            RegisMenu.Visibility = Visibility.Hidden;
         }
     }
 }
