@@ -63,5 +63,12 @@ namespace Exchange_1
             RegistrMenu.Visibility = Visibility.Hidden;
             RegisMenu.Visibility = Visibility.Hidden;
         }
+
+        private void StackPanel_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MainMenu.Visibility = Visibility.Hidden;
+            RegistrMenu.Visibility = Visibility.Hidden;
+            RegisMenu.Visibility = Visibility.Visible;
+        }
     }
 }
