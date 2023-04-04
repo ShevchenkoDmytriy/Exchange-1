@@ -10,6 +10,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -19,9 +20,12 @@ namespace Exchange_1
     public partial class MainWindow : Window
     {
         int f = 1;
+        int def = 0;
         public MainWindow()
         {
             InitializeComponent();
+
+
         }
 
         private void Input_Click(object sender, RoutedEventArgs e)
@@ -29,6 +33,16 @@ namespace Exchange_1
             MainMenu.Visibility = Visibility.Hidden;
             RegistrMenu.Visibility = Visibility.Visible;
             RegisMenu.Visibility = Visibility.Hidden;
+            if (def == 1)
+            {
+                Input.Visibility = Visibility.Hidden;
+                Reg.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                Input.Visibility = Visibility.Visible;
+                Reg.Visibility = Visibility.Visible;
+            }
         }
 
         private void logo_Click(object sender, RoutedEventArgs e)
@@ -36,6 +50,16 @@ namespace Exchange_1
             MainMenu.Visibility = Visibility.Visible;
             RegistrMenu.Visibility = Visibility.Hidden;
             RegisMenu.Visibility = Visibility.Hidden;
+            if (def == 1)
+            {
+                Input.Visibility = Visibility.Hidden;
+                Reg.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                Input.Visibility = Visibility.Visible;
+                Reg.Visibility = Visibility.Visible;
+            }
         }
 
         private void logo1_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -43,13 +67,33 @@ namespace Exchange_1
             MainMenu.Visibility = Visibility.Visible;
             RegistrMenu.Visibility = Visibility.Hidden;
             RegisMenu.Visibility = Visibility.Hidden;
+            if (def == 1)
+            {
+                Input.Visibility = Visibility.Hidden;
+                Reg.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                Input.Visibility = Visibility.Visible;
+                Reg.Visibility = Visibility.Visible;
+            }
         }
 
         private void Reg_Click(object sender, RoutedEventArgs e)
         {
             MainMenu.Visibility = Visibility.Hidden;
             RegistrMenu.Visibility = Visibility.Hidden;
-            RegisMenu.Visibility = Visibility.Visible;  
+            RegisMenu.Visibility = Visibility.Visible;
+            if (def == 1)
+            {
+                Input.Visibility = Visibility.Hidden;
+                Reg.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                Input.Visibility = Visibility.Visible;
+                Reg.Visibility = Visibility.Visible;
+            }
         }
 
         private void logo2_Click(object sender, RoutedEventArgs e)
@@ -57,6 +101,16 @@ namespace Exchange_1
             MainMenu.Visibility = Visibility.Visible;
             RegistrMenu.Visibility = Visibility.Hidden;
             RegisMenu.Visibility = Visibility.Hidden;
+            if (def == 1)
+            {
+                Input.Visibility = Visibility.Hidden;
+                Reg.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                Input.Visibility = Visibility.Visible;
+                Reg.Visibility = Visibility.Visible;
+            }
         }
 
         private void logo3_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -64,15 +118,17 @@ namespace Exchange_1
             MainMenu.Visibility = Visibility.Visible;
             RegistrMenu.Visibility = Visibility.Hidden;
             RegisMenu.Visibility = Visibility.Hidden;
+            if (def == 1)
+            {
+                Input.Visibility = Visibility.Hidden;
+                Reg.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                Input.Visibility = Visibility.Visible;
+                Reg.Visibility = Visibility.Visible;
+            }
         }
-
-        private void StackPanel_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            MainMenu.Visibility = Visibility.Hidden;
-            RegistrMenu.Visibility = Visibility.Hidden;
-            RegisMenu.Visibility = Visibility.Visible;
-        }
-
         private void CreateAcc_Click(object sender, RoutedEventArgs e)
         {
             using (ApplicationContext db = new ApplicationContext())
@@ -85,7 +141,17 @@ namespace Exchange_1
                     var users = db.Users.ToList();
                     db.Users.Add(peop);
                     db.SaveChanges();
+                    def = 1;
                     MessageBox.Show("Реєстрація прошла успішно");
+                    MainMenu.Visibility = Visibility.Visible;
+                    RegistrMenu.Visibility = Visibility.Hidden;
+                    RegisMenu.Visibility = Visibility.Hidden;
+                    if (def == 1)
+                    {
+                        Input.Visibility = Visibility.Hidden;
+                        Reg.Visibility = Visibility.Hidden;
+                    }
+
                 }
                 if (f == 2)
                 {
@@ -97,7 +163,16 @@ namespace Exchange_1
                         var users = db.Users.ToList();
                         db.Users.Add(peop);
                         db.SaveChanges();
+                        def = 1;
                         MessageBox.Show("Реєстрація прошла успішно");
+                        MainMenu.Visibility = Visibility.Visible;
+                        RegistrMenu.Visibility = Visibility.Hidden;
+                        RegisMenu.Visibility = Visibility.Hidden;
+                        if (def == 1)
+                        {
+                            Input.Visibility = Visibility.Hidden;
+                            Reg.Visibility = Visibility.Hidden;
+                        }
                     }
                     else
                     {
@@ -117,6 +192,7 @@ namespace Exchange_1
             num1.Visibility = Visibility.Hidden;
             RegInput3.Visibility = Visibility.Hidden;
             RegInput1.Visibility = Visibility.Visible;
+
         }
         private void num_Click(object sender, RoutedEventArgs e)
         {
@@ -127,6 +203,62 @@ namespace Exchange_1
             num1.Visibility=Visibility.Visible;
             RegInput3.Visibility = Visibility.Visible;
             RegInput1.Visibility = Visibility.Hidden;
+        }
+
+        private void Create_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MainMenu.Visibility = Visibility.Hidden;
+            RegistrMenu.Visibility = Visibility.Hidden;
+            RegisMenu.Visibility = Visibility.Visible;
+        }
+
+        private void Next_Click(object sender, RoutedEventArgs e)
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                MainWindow window = new MainWindow();
+                string log = Convert.ToString(Enter.Text);
+                var users = db.Users.ToList();
+                foreach (Users u in users)
+                {
+                    if (u.Gmail == log|| u.Num == log)
+                    {
+Next.Visibility = Visibility.Hidden;
+                        Next1.Visibility = Visibility.Visible;
+                        change.Content = "Пароль";
+                        Enter.Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Помилка");
+                    }
+                }
+
+            }
+        }
+
+        private void Next1_Click(object sender, RoutedEventArgs e)
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                MainWindow window = new MainWindow();
+                string log = Convert.ToString(Enter.Text);
+                var users = db.Users.ToList();
+                foreach (Users u in users)
+                {
+                    if (u.Password == log)
+                    {
+                        def = 1;
+                        MessageBox.Show("Успішний вхід");
+                        RegistrMenu.Visibility = Visibility.Hidden;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Помилка");
+                    }
+                }
+
+            }
         }
     }
 }
