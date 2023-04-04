@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exchange_1
+﻿public class Users
 {
-    internal class User
-    {
-    }
+    public int Id { get; set; }
+    public string? Num { get; set; }
+    public string? Gmail { get; set; }
+    public string? Password { get; set; }
 }

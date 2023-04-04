@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Runtime.Intrinsics.X86;
 
-namespace Exchange_1
+
+public class ApplicationContext : DbContext
 {
-    internal class ApplicationContext
+    public DbSet<Users> Users { get; set; } = null!;
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
+        optionsBuilder.UseSqlServer(@"Data Source = HOME-PC; Initial Catalog = DataBase; Trusted_Connection=True; TrustServerCertificate=True");
     }
 }
