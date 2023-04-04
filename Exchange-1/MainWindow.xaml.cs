@@ -24,5 +24,11 @@ namespace Exchange_1
         {
             InitializeComponent();
         }
+
+        private void Input_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenu.Visibility = Visibility.Hidden;
+            RegistrMenu.Visibility = Visibility.Visible;
+        }
     }
 }
