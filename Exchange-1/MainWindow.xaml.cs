@@ -38,11 +38,13 @@ namespace Exchange_1
             {
                 Input.Visibility = Visibility.Hidden;
                 Reg.Visibility = Visibility.Hidden;
+                Money.Visibility = Visibility.Visible;
             }
             else
             {
                 Input.Visibility = Visibility.Visible;
                 Reg.Visibility = Visibility.Visible;
+                Money.Visibility = Visibility.Hidden;
             }
         }
 
@@ -55,11 +57,13 @@ namespace Exchange_1
             {
                 Input.Visibility = Visibility.Hidden;
                 Reg.Visibility = Visibility.Hidden;
+                Money.Visibility = Visibility.Visible;
             }
             else
             {
                 Input.Visibility = Visibility.Visible;
                 Reg.Visibility = Visibility.Visible;
+                Money.Visibility = Visibility.Hidden;
             }
         }
 
@@ -72,11 +76,13 @@ namespace Exchange_1
             {
                 Input.Visibility = Visibility.Hidden;
                 Reg.Visibility = Visibility.Hidden;
+                Money.Visibility = Visibility.Visible;
             }
             else
             {
                 Input.Visibility = Visibility.Visible;
                 Reg.Visibility = Visibility.Visible;
+                Money.Visibility = Visibility.Hidden;
             }
         }
 
@@ -89,11 +95,13 @@ namespace Exchange_1
             {
                 Input.Visibility = Visibility.Hidden;
                 Reg.Visibility = Visibility.Hidden;
+                Money.Visibility = Visibility.Visible;
             }
             else
             {
                 Input.Visibility = Visibility.Visible;
                 Reg.Visibility = Visibility.Visible;
+                Money.Visibility = Visibility.Hidden;
             }
         }
 
@@ -106,11 +114,13 @@ namespace Exchange_1
             {
                 Input.Visibility = Visibility.Hidden;
                 Reg.Visibility = Visibility.Hidden;
+                Money.Visibility = Visibility.Visible;
             }
             else
             {
                 Input.Visibility = Visibility.Visible;
                 Reg.Visibility = Visibility.Visible;
+                Money.Visibility = Visibility.Hidden;
             }
         }
 
@@ -123,11 +133,13 @@ namespace Exchange_1
             {
                 Input.Visibility = Visibility.Hidden;
                 Reg.Visibility = Visibility.Hidden;
+                Money.Visibility = Visibility.Visible;
             }
             else
             {
                 Input.Visibility = Visibility.Visible;
                 Reg.Visibility = Visibility.Visible;
+                Money.Visibility = Visibility.Hidden;
             }
         }
         private void CreateAcc_Click(object sender, RoutedEventArgs e)
@@ -151,6 +163,7 @@ namespace Exchange_1
                     {
                         Input.Visibility = Visibility.Hidden;
                         Reg.Visibility = Visibility.Hidden;
+                        Money.Visibility = Visibility.Visible;
                     }
 
                 }
@@ -173,6 +186,7 @@ namespace Exchange_1
                         {
                             Input.Visibility = Visibility.Hidden;
                             Reg.Visibility = Visibility.Hidden;
+                            Money.Visibility = Visibility.Visible;
                         }
                     }
                     else
@@ -224,6 +238,7 @@ namespace Exchange_1
                 {
                     if (u.Gmail == log|| u.Num == log)
                     {
+                        MessageBox.Show("Успішно");
                          Next.Visibility = Visibility.Hidden;
                         Next1.Visibility = Visibility.Visible;
                         change.Content = "Пароль";
@@ -231,6 +246,18 @@ namespace Exchange_1
                     }
                 }
 
+            }
+            if (def == 1)
+            {
+                Input.Visibility = Visibility.Hidden;
+                Reg.Visibility = Visibility.Hidden;
+                Money.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Input.Visibility = Visibility.Visible;
+                Reg.Visibility = Visibility.Visible;
+                Money.Visibility = Visibility.Hidden;
             }
         }
 
@@ -246,7 +273,6 @@ namespace Exchange_1
                     if (u.Password == log)
                     {
                         def = 1;
-                
                         if(def== 1) 
                         {
                             MessageBox.Show("Вхід успішний");
@@ -254,12 +280,20 @@ namespace Exchange_1
                             MainMenu.Visibility = Visibility.Visible;
                         }
                     }
-                    else
-                    {
-
-                    }
                 }
 
+            }
+            if (def == 1)
+            {
+                Input.Visibility = Visibility.Hidden;
+                Reg.Visibility = Visibility.Hidden;
+                Money.Visibility  = Visibility.Visible;
+            }
+            else
+            {
+                Input.Visibility = Visibility.Visible;
+                Reg.Visibility = Visibility.Visible;
+                Money.Visibility = Visibility.Hidden;
             }
         }
     }
