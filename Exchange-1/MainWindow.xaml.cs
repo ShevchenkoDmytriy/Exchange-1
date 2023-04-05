@@ -21,7 +21,6 @@ namespace Exchange_1
     {
         int f = 1;
         int def = 0;
-        int check = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -224,10 +223,14 @@ namespace Exchange_1
                 {
                     if (u.Gmail == log|| u.Num == log)
                     {
-                         Next.Visibility = Visibility.Hidden;
+Next.Visibility = Visibility.Hidden;
                         Next1.Visibility = Visibility.Visible;
                         change.Content = "Пароль";
                         Enter.Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Помилка");
                     }
                 }
 
@@ -246,18 +249,12 @@ namespace Exchange_1
                     if (u.Password == log)
                     {
                         def = 1;
-                        check = 1;
-                        if(check== 1) 
-                        {
-                            MessageBox.Show("Вхід успішний");
-                            RegistrMenu.Visibility = Visibility.Hidden;
-                            MainMenu.Visibility = Visibility.Visible;
-                        }
-                        check = 0;
+                        MessageBox.Show("Успішний вхід");
+                        RegistrMenu.Visibility = Visibility.Hidden;
                     }
                     else
                     {
-
+                        MessageBox.Show("Помилка");
                     }
                 }
 
