@@ -7,17 +7,18 @@
         mc:Ignorable="d"
           Title="" Height="800" Width="1500">
     <Grid>
-        <StackPanel x:Name="MainMenu" Orientation="Vertical" Visibility="Hidden">
+        <StackPanel x:Name="MainMenu" Orientation="Vertical" Visibility="Visible">
             <StackPanel Orientation="Horizontal" Height="70" >
                 <Button  Width="40" Height="32"  FontSize="20" Margin="16,0,0,0" Background="Transparent" BorderBrush="Transparent" >
                     <Image Source="Images/logo.png" Height="30" Width="30" Stretch="Fill"/>
                 </Button >
                 <Label  Width="120" Height="31" Margin="0,0,0,0" Content="Kriptop" FontSize="24" Padding="0,0,0,0" Foreground="#C99400"  />
-                <Button x:Name="Input" Width="52" Height="32"  Margin="950,0,0,0" BorderBrush="Transparent" Background="Transparent" Content="Вхід" FontSize="14" FontFamily="Arial" Click="Input_Click" />
-                <Button x:Name="Reg" Width="113" Height="32" Margin="10,0,0,0" Background="#FCD535" BorderBrush="Transparent" Content="Реєстрація" FontSize="14" FontFamily="Arial" Click="Reg_Click" />
+                <Button x:Name="Input" Width="52" Height="32"  Margin="950,0,0,0" BorderBrush="Transparent" Background="Transparent" Content="Вхід" FontSize="14" FontFamily="Arial" Click="Input_Click"  Visibility="Visible"/>
+                <Button x:Name="Reg" Width="113" Height="32" Margin="10,0,0,0" Background="#FCD535" BorderBrush="Transparent" Content="Реєстрація" FontSize="14" FontFamily="Arial" Click="Reg_Click" Visibility="Visible"/>
                 <Button  Width="30" Height="30" Margin="125,0,0,0"  Background="Transparent" BorderBrush="Transparent" >
-                    <Image Source="Images/moon.png" Height="30" Width="30"/>
+                    <Image Source="Images/moon.png" Height="30" Width="30" />
                 </Button>
+                <Button x:Name="Money" Width="113" Height="32" BorderBrush="Transparent" Background="Gray" Content="Гаманець" FontSize="14" FontFamily="Arial" Visibility="Hidden" Margin="-425,0,0,0"/>
             </StackPanel>
         </StackPanel>
         
@@ -33,18 +34,21 @@
                     <Image Source="Images/moon.png" Height="30" Width="30"/>
                 </Button>
             </StackPanel>
-            <StackPanel Orientation="Vertical" Height="556" Width="1000" Margin="0,20,0,0" PreviewMouseLeftButtonDown="StackPanel_PreviewMouseLeftButtonDown" >
+            <StackPanel Orientation="Vertical" Height="556" Width="1000" Margin="0,20,0,0"  >
                 <Label Content="Login" Height="43"  Width="976" FontSize="32" Padding="0,0,0,0" Margin="0,115,0,0" FontFamily="Arial"/>
-                <Label Content="Ел. почта/ номер телефону" Height="20"  Width="384" FontSize="14" HorizontalAlignment="Left"  Padding="0,0,0,0" Margin="12,30,0,0" FontFamily="Arial"/>
-                <TextBox Width="384" Height="40" HorizontalAlignment="Left"  Margin="12,10,0,0" FontSize="20" BorderThickness="1" BorderBrush="#FFD6D6D6" FontFamily="Arial"/>
-                <Button Width="384" Height="48" Background="#FCD535" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="12,15,0,0" Content="Далі" FontSize="16" FontFamily="Arial"/>
-                <Label x:Name="Create" Width="384" Height="20" HorizontalAlignment="Left" Margin="12,50,0,0" FontSize="14" Foreground="#C99400" Content="Створити акаунт" Padding="0,0,0,0" FontFamily="Arial"/>
+                <Label x:Name="change" Content="Ел. почта/ номер телефону" Height="20"  Width="384" FontSize="14" HorizontalAlignment="Left"  Padding="0,0,0,0" Margin="12,30,0,0" FontFamily="Arial"/>
+                <TextBox x:Name="Enter" Width="384" Height="40" HorizontalAlignment="Left"  Margin="12,10,0,0" FontSize="20" BorderThickness="1" BorderBrush="#FFD6D6D6" FontFamily="Arial"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="Next" Width="384" Height="48" Background="#FCD535" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="12,15,0,0" Content="Далі" FontSize="16" FontFamily="Arial" Click="Next_Click" Visibility="Visible"/>
+                    <Button x:Name="Next1" Width="384" Height="48" Background="#FCD535" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="-384,15,0,0" Content="Увійти" FontSize="16" FontFamily="Arial" Visibility="Hidden" Click="Next1_Click" />
+                </StackPanel>
+                     <Label x:Name="Create" Width="384" Height="20" HorizontalAlignment="Left" Margin="12,50,0,0" FontSize="14" Foreground="#C99400" Content="Створити акаунт" Padding="0,0,0,0" FontFamily="Arial" PreviewMouseLeftButtonDown="Create_PreviewMouseLeftButtonDown"/>
             </StackPanel>
         </StackPanel>
         
         
         
-        <StackPanel x:Name="RegisMenu"  Orientation="Vertical" Visibility="Visible">
+        <StackPanel x:Name="RegisMenu"  Orientation="Vertical" Visibility="Hidden">
             <StackPanel Orientation="Horizontal" Height="70" >
                 <Button x:Name="logo2" Width="40" Height="32"  FontSize="20" Margin="16,0,0,0" Background="Transparent" BorderBrush="Transparent" Click="logo2_Click" >
                     <Image Source="Images/logo.png" Height="30" Width="30" Stretch="Fill"/>
@@ -57,15 +61,19 @@
             <StackPanel Orientation="Vertical" Height="556" Width="1000" Margin="0,20,0,0" >
                 <Label Content="Створення персонального акаунту" Height="43"  Width="976" FontSize="32" Padding="0,0,0,0" Margin="0,60,0,0" FontFamily="Arial"/>
                 <StackPanel Orientation="Horizontal">
-                    <Button x:Name="email" Width="190" Height="40" Background="Transparent" BorderBrush="Transparent" Margin="12,24,0,0" Content="Електронна пошта" FontSize="16" FontFamily="Arial"/>
-                    <Button x:Name="num" Width="190" Height="40" Background="Transparent" BorderBrush="Transparent" Margin="24,24,0,0" Content="Номер телефону" FontSize="16" FontFamily="Arial"/> 
+                    <Button x:Name="email" Width="190" Height="40" Background="Transparent" BorderBrush="Transparent" Margin="12,24,0,0" Content="Електронна пошта" FontSize="16" FontFamily="Arial" Click="email_Click"/>
+                    <Button x:Name="num" Width="190" Height="40" Background="Transparent" BorderBrush="Transparent" Foreground="Gray" Margin="24,24,0,0" Content="Номер телефону" FontSize="16" FontFamily="Arial" Click="num_Click"/> 
                 </StackPanel>
-                <Label Width="384" Height="20" HorizontalAlignment="Left" Margin="12,15,0,0" Content="Персональна ел. пошта" Padding="0,0,0,0"/>
-                <TextBox x:Name="RegInput1" Width="384" Height="46" HorizontalAlignment="Left" Margin="12,0,0,0" FontSize="14"  Padding="0,12,0,0" FontFamily="Arial" BorderBrush="#FFD6D6D6"/>
+                <Label x:Name="swap" Width="384" Height="20" HorizontalAlignment="Left" Margin="12,15,0,0" Content="Персональна ел. пошта" Padding="0,0,0,0"/>
+                <StackPanel  Orientation="Horizontal">
+                    <TextBox x:Name="RegInput1" Width="384" Height="46" HorizontalAlignment="Left" Margin="12,0,0,0" FontSize="14"  Padding="0,12,0,0" FontFamily="Arial" BorderBrush="#FFD6D6D6"/>
+                    <Label x:Name="num1" Height="46" Width="60" Margin="-384,0,0,0" HorizontalAlignment="Left" Content="+380" FontSize="14" Padding="10,12,0,0" Visibility="Hidden"/>
+                    <TextBox x:Name="RegInput3" Width="320" Height="46" HorizontalAlignment="Left" Margin="-320,0,0,0" FontSize="14"  Padding="0,12,0,0" FontFamily="Arial" BorderBrush="#FFD6D6D6" Visibility="Hidden"/>
+                </StackPanel>
                 <Label Width="384" Height="20" HorizontalAlignment="Left" Margin="12,7,0,0" Content="Пароль" Padding="0,0,0,0" FontFamily="Arial"/>
                 <TextBox x:Name="RegInput2" Width="384" Height="46" HorizontalAlignment="Left" Margin="12,0,0,0" FontSize="14"  Padding="0,12,0,0" FontFamily="Arial" BorderBrush="#FFD6D6D6"/>
                 <Label Width="360" Height="20" HorizontalAlignment="Left" Margin="30,14,0,0" Content="Я ознайомився і погоджуюсь з Умовами використання" Padding="0,0,0,0" FontFamily="Arial"/>
-                <Button x:Name="CreateAcc" Width="384" Height="48" Background="#FCD535" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="12,25,0,0" Content="Створення персонального акаунту" FontSize="16" FontFamily="Arial"/>
+                <Button x:Name="CreateAcc" Width="384" Height="48" Background="#FCD535" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="12,25,0,0" Content="Створення персонального акаунту" FontSize="16" FontFamily="Arial" Click="CreateAcc_Click"/>
             </StackPanel>
         </StackPanel>
         
