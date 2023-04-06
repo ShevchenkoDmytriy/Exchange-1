@@ -23,6 +23,7 @@ namespace Exchange_1
         int f = 1;
         int def = 0;
         int check = 0;
+        int f1 = 0;
         public MainWindow()
         {
             InitializeComponent();   
@@ -110,6 +111,9 @@ namespace Exchange_1
             MainMenu.Visibility = Visibility.Visible;
             RegistrMenu.Visibility = Visibility.Hidden;
             RegisMenu.Visibility = Visibility.Hidden;
+            Cost.Visibility = Visibility.Hidden;
+            pay1.Visibility = Visibility.Hidden;
+            pov.Visibility = Visibility.Hidden;
             if (def == 1)
             {
                 Input.Visibility = Visibility.Hidden;
@@ -129,6 +133,9 @@ namespace Exchange_1
             MainMenu.Visibility = Visibility.Visible;
             RegistrMenu.Visibility = Visibility.Hidden;
             RegisMenu.Visibility = Visibility.Hidden;
+            Cost.Visibility = Visibility.Hidden;
+            pay1.Visibility = Visibility.Hidden;
+            pov.Visibility = Visibility.Hidden;
             if (def == 1)
             {
                 Input.Visibility = Visibility.Hidden;
@@ -399,5 +406,111 @@ namespace Exchange_1
             Next1.Visibility = Visibility.Hidden;
             Enter.Clear();
         }
+
+        private void Money_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenu.Visibility= Visibility.Hidden;
+            RegistrMenu.Visibility = Visibility.Hidden;
+            RegisMenu.Visibility = Visibility.Hidden;
+            Cost.Visibility = Visibility.Visible;
+            prof.Visibility = Visibility.Visible;
+
+        }
+
+        private void kard_Click(object sender, RoutedEventArgs e)
+        {
+            prof.Visibility=    Visibility.Hidden; 
+            pov.Visibility= Visibility.Visible;
+            if (f1 == 0)
+            {
+                BTC1.Background = new SolidColorBrush(Colors.White);
+                BNB1.Background = new SolidColorBrush(Colors.White);
+                USDT1.Background = new SolidColorBrush(Colors.White);
+                BUSD1.Background = new SolidColorBrush(Colors.White);
+                ETH1.Background = new SolidColorBrush(Colors.White);
+            }
+        }
+
+        private void BTC1_Click(object sender, RoutedEventArgs e)
+        {
+            f1 = 1;
+
+                BTC1.Background = new SolidColorBrush(Color.FromRgb(252, 213, 53));
+                BNB1.Background = new SolidColorBrush(Colors.White);
+                USDT1.Background = new SolidColorBrush(Colors.White);
+                BUSD1.Background = new SolidColorBrush(Colors.White);
+                ETH1.Background = new SolidColorBrush(Colors.White);
+            
+        }
+
+        private void BNB1_Click(object sender, RoutedEventArgs e)
+        {
+            f1 = 2;
+            BTC1.Background = new SolidColorBrush(Colors.White);
+            BNB1.Background = new SolidColorBrush(Color.FromRgb(252, 213, 53));
+            USDT1.Background = new SolidColorBrush(Colors.White);
+            BUSD1.Background = new SolidColorBrush(Colors.White);
+            ETH1.Background = new SolidColorBrush(Colors.White);
+        }
+
+        private void USDT1_Click(object sender, RoutedEventArgs e)
+        {
+            f1 = 3;
+            BTC1.Background = new SolidColorBrush(Colors.White);
+            BNB1.Background = new SolidColorBrush(Colors.White);
+            USDT1.Background = new SolidColorBrush(Color.FromRgb(252, 213, 53));
+            BUSD1.Background = new SolidColorBrush(Colors.White);
+            ETH1.Background = new SolidColorBrush(Colors.White);
+        }
+
+        private void ETH1_Click(object sender, RoutedEventArgs e)
+        {
+            f1 = 4;
+            BTC1.Background = new SolidColorBrush(Colors.White);
+            BNB1.Background = new SolidColorBrush(Colors.White);
+            USDT1.Background = new SolidColorBrush(Colors.White);
+            BUSD1.Background = new SolidColorBrush(Colors.White);
+            ETH1.Background = new SolidColorBrush(Color.FromRgb(252, 213, 53));
+        }
+
+        private void BUSD1_Click(object sender, RoutedEventArgs e)
+        {
+
+                BTC1.Background = new SolidColorBrush(Colors.White);
+                BNB1.Background = new SolidColorBrush(Colors.White);
+                USDT1.Background = new SolidColorBrush(Colors.White);
+                BUSD1.Background = new SolidColorBrush(Color.FromRgb(252, 213, 53));
+                ETH1.Background = new SolidColorBrush(Colors.White);
+        }
+
+        private void true1_Click(object sender, RoutedEventArgs e)
+        {
+            if (f1 > 0 & f1 <= 5 & Num1.Text != "")
+            {
+                pay1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                MessageBox.Show("Помилка");
+            }
+            if(f1==1)
+            {
+                int b = Convert.ToInt32(Num1.Text);
+                sum.Content = $"{b*28000}$";
+            }
+            f1 = 0;
+
+        }
+
+        private void check1_Click(object sender, RoutedEventArgs e)
+        {
+            pay1.Visibility = Visibility.Hidden;
+            pov.Visibility = Visibility.Hidden;
+            Cost.Visibility = Visibility.Visible;
+            prof.Visibility = Visibility.Visible;
+            Num1.Clear();
+        }
+
+
     }
 }
