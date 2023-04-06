@@ -164,6 +164,7 @@ namespace Exchange_1
                         Input.Visibility = Visibility.Hidden;
                         Reg.Visibility = Visibility.Hidden;
                         Money.Visibility = Visibility.Visible;
+                        Input1.Visibility = Visibility.Visible;
                     }
 
                 }
@@ -187,6 +188,8 @@ namespace Exchange_1
                             Input.Visibility = Visibility.Hidden;
                             Reg.Visibility = Visibility.Hidden;
                             Money.Visibility = Visibility.Visible;
+                            but1.Visibility = Visibility.Hidden;
+                            Input1.Visibility = Visibility.Visible;
                         }
                     }
                     else
@@ -252,12 +255,16 @@ namespace Exchange_1
                 Input.Visibility = Visibility.Hidden;
                 Reg.Visibility = Visibility.Hidden;
                 Money.Visibility = Visibility.Visible;
+                but1.Visibility = Visibility.Hidden;
+                Input1.Visibility = Visibility.Visible;
             }
             else
             {
                 Input.Visibility = Visibility.Visible;
                 Reg.Visibility = Visibility.Visible;
                 Money.Visibility = Visibility.Hidden;
+                but1.Visibility = Visibility.Visible;
+                Input1.Visibility = Visibility.Hidden;
             }
         }
 
@@ -278,6 +285,8 @@ namespace Exchange_1
                             MessageBox.Show("Вхід успішний");
                             RegistrMenu.Visibility = Visibility.Hidden;
                             MainMenu.Visibility = Visibility.Visible;
+                            but1.Visibility = Visibility.Hidden;
+                            Input1.Visibility = Visibility.Visible;
                         }
                     }
                 }
@@ -288,12 +297,16 @@ namespace Exchange_1
                 Input.Visibility = Visibility.Hidden;
                 Reg.Visibility = Visibility.Hidden;
                 Money.Visibility  = Visibility.Visible;
+                but1.Visibility= Visibility.Hidden;
+                Input1.Visibility = Visibility.Visible;
             }
             else
             {
                 Input.Visibility = Visibility.Visible;
                 Reg.Visibility = Visibility.Visible;
                 Money.Visibility = Visibility.Hidden;
+                but1.Visibility = Visibility.Visible;
+                Input1.Visibility = Visibility.Hidden;
             }
         }   
 
@@ -306,6 +319,26 @@ namespace Exchange_1
                 Lite1.Visibility = Visibility.Visible;
                 Panel.Background = new SolidColorBrush(Color.FromRgb(24, 26, 32));
                 Input.Foreground=new SolidColorBrush(Colors.White);
+                Main1.Foreground = new SolidColorBrush(Colors.White);
+                Main2.Foreground = new SolidColorBrush(Colors.White);
+                Main3.Foreground = new SolidColorBrush(Colors.White);
+                Main4.Foreground = new SolidColorBrush(Colors.White);
+                Main5.Foreground = new SolidColorBrush(Colors.White);
+                Main6.Foreground = new SolidColorBrush(Colors.White);
+                Main7.Foreground = new SolidColorBrush(Colors.White);
+                Main8.Foreground = new SolidColorBrush(Colors.White);
+                Main10.Foreground = new SolidColorBrush(Colors.White);
+                Main11.Foreground = new SolidColorBrush(Colors.White);
+                Main12.Foreground = new SolidColorBrush(Colors.White);
+                Main13.Foreground = new SolidColorBrush(Colors.White);
+                Main14.Foreground = new SolidColorBrush(Colors.White);
+                Main15.Foreground = new SolidColorBrush(Colors.White);
+                stack1.Background = new SolidColorBrush(Color.FromRgb(11, 14, 17));
+                stack2.Background = new SolidColorBrush(Color.FromRgb(24, 26, 32));
+                stack3.Background = new SolidColorBrush(Color.FromRgb(24, 26, 32));
+                stack4.Background = new SolidColorBrush(Color.FromRgb(24, 26, 32));
+                stack5.Background = new SolidColorBrush(Color.FromRgb(11, 14, 17));
+                stack6.Background = new SolidColorBrush(Color.FromRgb(11, 14, 17));
             }
         }
 
@@ -318,10 +351,53 @@ namespace Exchange_1
                 Lite1.Visibility = Visibility.Hidden;
                 Panel.Background = new SolidColorBrush(Colors.White);
                 Input.Foreground = new SolidColorBrush(Colors.Black);
-                
+                Main1.Foreground = new SolidColorBrush(Colors.Black);
+                Main2.Foreground = new SolidColorBrush(Colors.Black);
+                Main3.Foreground = new SolidColorBrush(Colors.Black);
+                Main4.Foreground = new SolidColorBrush(Colors.Black);
+                Main5.Foreground = new SolidColorBrush(Colors.Black);
+                Main6.Foreground = new SolidColorBrush(Colors.Black);
+                Main7.Foreground = new SolidColorBrush(Colors.Black);
+                Main8.Foreground = new SolidColorBrush(Colors.Black);
+                Main10.Foreground = new SolidColorBrush(Colors.Black);
+                Main11.Foreground = new SolidColorBrush(Colors.Black);
+                Main12.Foreground = new SolidColorBrush(Colors.Black);
+                Main13.Foreground = new SolidColorBrush(Colors.Black);
+                Main14.Foreground = new SolidColorBrush(Colors.Black);
+                Main15.Foreground = new SolidColorBrush(Colors.Black);
+                stack1.Background = new SolidColorBrush(Colors.White);
+                stack2.Background = new SolidColorBrush(Colors.White);
+                stack3.Background = new SolidColorBrush(Colors.White);
+                stack4.Background = new SolidColorBrush(Colors.White);
+                stack5.Background = new SolidColorBrush(Colors.White);
+                stack6.Background = new SolidColorBrush(Colors.White);
             }
         }
 
-
+        private void Input1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Ви дійсно хочете вийти?Якщо так - натисніть Ок");
+            def = 0;
+            if (def == 1)
+            {
+                Input.Visibility = Visibility.Hidden;
+                Reg.Visibility = Visibility.Hidden;
+                Money.Visibility = Visibility.Visible;
+                but1.Visibility = Visibility.Hidden;
+                Input1.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Input.Visibility = Visibility.Visible;
+                Reg.Visibility = Visibility.Visible;
+                Money.Visibility = Visibility.Hidden;
+                but1.Visibility = Visibility.Visible;
+                Input1.Visibility = Visibility.Hidden;
+            }
+            change.Content = "Ел. почта/ номер телефону";
+            Next.Visibility = Visibility.Visible;
+            Next1.Visibility = Visibility.Hidden;
+            Enter.Clear();
+        }
     }
 }

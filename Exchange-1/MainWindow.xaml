@@ -19,23 +19,24 @@
                 <Button x:Name="Lite"  Width="30" Height="30" Margin="125,0,0,0"  Background="Transparent" BorderBrush="Transparent" Click="Lite_Click" >
                     <Image Source="Images/moon.png" Height="30" Width="30" />
                 </Button>
-                <Button x:Name="Money" Width="113" Height="32" BorderBrush="Transparent" Background="Gray" Content="Гаманець" FontSize="14" FontFamily="Arial" Visibility="Hidden" Margin="-425,0,0,0"/>
-                <Button x:Name="Lite1"   Width="30" Height="30" Margin="-30,0,0,0"  Background="Transparent" BorderBrush="Transparent" Click="Lite1_Click" Visibility="Hidden">
+                    <Button x:Name="Money" Width="115" Height="30" BorderBrush="Transparent" Background="#FCD535" Foreground="Black" Content="Дані" FontSize="14" FontFamily="Arial" Visibility="Hidden" Margin="-425,0,0,0"/>
+                <Button x:Name="Lite1"   Width="32" Height="30" Margin="-30,0,0,0"  Background="Transparent" BorderBrush="Transparent" Click="Lite1_Click" Visibility="Hidden">
                     <Image Source="Images/sun.png" Height="25" Width="25" />
                 </Button>
-            </StackPanel>
-            <StackPanel  Width="1500" Height="400" Orientation="Horizontal">
+                    <Button x:Name="Input1" Width="52" Height="32"  Margin="-608,0,0,0" BorderBrush="Transparent" Background="Transparent" Content="Вийти" FontSize="14" FontFamily="Arial"  Visibility="Hidden" Click="Input1_Click"/>
+                </StackPanel>
+            <StackPanel x:Name="stack1"  Width="1500" Height="400" Orientation="Horizontal">
                 <StackPanel Orientation="Vertical" Width="560" Margin="200,0,0,0">
-                    <Label Height="147" Content="Купуйте, торгуйте та &#xD;&#xA;утримуйте &#xD;&#xA;криптовалюту" FontSize="40" FontFamily="arial" Margin="0,100,0,0"/>
-                    <Button Width="380" Height="50" Background="#FCD535" HorizontalAlignment="Left"  Margin="0,30,0,0" Content="Зареєструватися за номером або ел. поштою" FontSize="16" FontFamily="arial" Click="Reg_Click" BorderBrush="Transparent"/>
+                    <Label x:Name="Main1" Height="147" Content="Купуйте, торгуйте та &#xD;&#xA;утримуйте &#xD;&#xA;криптовалюту" FontSize="40" FontFamily="arial" Margin="0,100,0,0"/>
+                    <Button x:Name="but1"  Width="380" Height="50" Background="#FCD535" HorizontalAlignment="Left"  Margin="0,30,0,0" Content="Зареєструватися за номером або ел. поштою" FontSize="16" FontFamily="arial" Click="Reg_Click" BorderBrush="Transparent"/>
                 </StackPanel>
             </StackPanel>
-            <StackPanel Width="1500" Height="350" Orientation="Vertical">
-                <Label Height="90" Content="Популярні криптовалюти" FontSize="40" FontFamily="arial" Margin="200,0,0,0"/>
+                <StackPanel x:Name="stack2" Width="1500" Height="350" Orientation="Vertical">
+                    <Label x:Name="Main2" Height="90" Content="Популярні криптовалюти" FontSize="40" FontFamily="arial" Margin="200,0,0,0"/>
                 <StackPanel Orientation="Horizontal"  Width="1100" Height="50">
-                        <Label Height="18" Width="400" Margin="5,0,0,0" Content="Назва" Padding="0,0,0,0" FontFamily="arial" FontSize="14"/>
-                    <Label Height="18" Width="400" Margin="0,0,0,0" Content="Остання ціна" Padding="0,0,0,0" FontFamily="arial" FontSize="14"/>
-                    <Label Height="18" Width="200" Margin="0,0,0,0" Content="Капіталізація ринку" Padding="0,0,0,0" FontFamily="arial" FontSize="14"/>
+                        <Label x:Name="Main3" Height="18" Width="400" Margin="5,0,0,0" Content="Назва" Padding="0,0,0,0" FontFamily="arial" FontSize="14"/>
+                        <Label x:Name="Main4" Height="18" Width="400" Margin="0,0,0,0" Content="Остання ціна" Padding="0,0,0,0" FontFamily="arial" FontSize="14"/>
+                        <Label x:Name="Main5" Height="18" Width="200" Margin="0,0,0,0" Content="Капіталізація ринку" Padding="0,0,0,0" FontFamily="arial" FontSize="14"/>
                 </StackPanel>
                     <StackPanel Orientation="Horizontal"  Width="1100" Height="50">
                         <Image Width="30" Height="30"/>
@@ -62,30 +63,30 @@
                         <Label x:Name="Sum4" Width="370" Height="32" FontFamily="arial" FontSize="16"/>
                     </StackPanel>
                 </StackPanel>
-                <StackPanel Height="300" Orientation="Vertical">
-                    <Label Height="100" Width="1100" Content="Побудуйте власний портфель &#xD;&#xA;криптовалют" FontSize="40" FontFamily="arial" Margin="0,0,0,0"/>
-                    <Label Height="35" Width="1100" Content="Почніть свою першу угоду з цих простих кроків." FontSize="20" FontFamily="arial" Margin="0,10,0,0" Foreground="#B7BDC6" />
+                <StackPanel x:Name="stack3" Height="300" Orientation="Vertical">
+                    <Label x:Name="Main6" Height="100" Width="1100" Content="Побудуйте власний портфель &#xD;&#xA;криптовалют" FontSize="40" FontFamily="arial" Margin="0,0,0,0"/>
+                    <Label x:Name="Main7" Height="35" Width="1100" Content="Почніть свою першу угоду з цих простих кроків." FontSize="20" FontFamily="arial" Margin="0,10,0,0" Foreground="#B7BDC6" />
                     <StackPanel  Width="1100" Orientation="Horizontal" Margin="0,50,0,0" >
                         <Image Width="80" Height="80" Source="Images/prof.png"/>
-                        <Label Width="480" Height="40" Content="Поповніть ваш акаунт"  FontFamily="arial" FontSize="24"/>
+                        <Label x:Name="Main8" Width="480" Height="40" Content="Поповніть ваш акаунт"  FontFamily="arial" FontSize="24"/>
                         <Image Width="80" Height="80" Source="Images/coin.png" Margin="160,0,0,0"/>
-                        <Label Width="480" Height="40" Content="Почніть торгівлю"  FontFamily="arial" FontSize="24"/>
+                        <Label x:Name="Main10" Width="480" Height="40" Content="Почніть торгівлю"  FontFamily="arial" FontSize="24"/>
                     </StackPanel>
                 </StackPanel>
-                <StackPanel Height="858" Orientation="Vertical">
-                    <Label Height="100" Width="1100" Content="Дослідіть безмежні можливості" FontSize="40" FontFamily="arial" Margin="0,80,0,0"/>
+                <StackPanel x:Name="stack4" Height="858" Orientation="Vertical">
+                    <Label x:Name="Main11" Height="100" Width="1100" Content="Дослідіть безмежні можливості" FontSize="40" FontFamily="arial" Margin="0,80,0,0"/>
                     <StackPanel Orientation="Horizontal">
-                        <StackPanel Orientation="Vertical" Width="408" Height="570" Margin="200,50,0,0">
-                            <Image Width="336" Height="217" Source="Images/graf.jpg" Stretch="Fill"/>
+                        <StackPanel x:Name="stack5" Orientation="Vertical" Width="408" Height="570" Margin="200,50,0,0">
+                            <Image Width="336" Height="217" Source="Images/graf.jpg" Stretch="Fill" Margin="0,10,0,0"/>
                             <Label />
-                            <Label  Width="328" Height="86" Margin="0,100,0,0" Content="Зануртесь у світ&#xD;&#xA;криптовалюти" FontSize="28" FontFamily="arial"/>
-                            <Label Width="328" Height="86" Content="Відкривайте рідкісні Mystery Box,&#xD;&#xA;досліджуйте IGO, фан-токени та багато &#xD;&#xA;іншого." FontSize="16" FontFamily="arial"/>
+                            <Label x:Name="Main12"  Width="328" Height="86" Margin="0,100,0,0" Content="Зануртесь у світ&#xD;&#xA;криптовалюти" FontSize="28" FontFamily="arial"/>
+                            <Label x:Name="Main13" Width="328" Height="86" Content="Відкривайте рідкісні Mystery Box,&#xD;&#xA;досліджуйте IGO, фан-токени та багато &#xD;&#xA;іншого." FontSize="16" FontFamily="arial"/>
                         </StackPanel>
-                        <StackPanel Orientation="Vertical" Width="408" Height="570" Margin="200,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                            <Image Width="336" Height="217" Source="Images/graf2.png"/>
+                        <StackPanel x:Name="stack6" Orientation="Vertical" Width="408" Height="570" Margin="200,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                            <Image Width="336" Height="217" Source="Images/graf2.png" Margin="0,10,0,0"/>
                             <Label />
-                            <Label Width="328" Height="86" Margin="0,100,0,0" Content="Зануртесь у світ&#xD;&#xA;криптовалюти" FontSize="28" FontFamily="arial"/>
-                            <Label Width="328" Height="86" Content="Відкривайте рідкісні Mystery Box,&#xD;&#xA;досліджуйте IGO, фан-токени та багато &#xD;&#xA;іншого." FontSize="16" FontFamily="arial"/>
+                            <Label x:Name="Main14" Width="328" Height="86" Margin="0,100,0,0" Content="Krypto Earn" FontSize="28" FontFamily="arial"/>
+                            <Label x:Name="Main15" Width="328" Height="86" Content="Холдіть свої кошти у криптовалюті та &#xD;&#xA;починайте заробляти." FontSize="16" FontFamily="arial"/>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
