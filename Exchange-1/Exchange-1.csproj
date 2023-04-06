@@ -9,8 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\adv.png" />
+    <None Remove="Images\adv1.gif" />
+    <None Remove="Images\coin.png" />
+    <None Remove="Images\graf.jpg" />
+    <None Remove="Images\graf2.png" />
     <None Remove="Images\logo.png" />
     <None Remove="Images\moon.png" />
+    <None Remove="Images\prof.png" />
     <None Remove="Images\sun.png" />
   </ItemGroup>
 
@@ -20,12 +26,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\adv.png" />
+    <Resource Include="Images\adv1.gif" />
+    <Resource Include="Images\coin.png" />
+    <Resource Include="Images\graf.jpg" />
+    <Resource Include="Images\graf2.png" />
     <Resource Include="Images\logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\moon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\prof.png" />
     <Resource Include="Images\sun.png" />
   </ItemGroup>
 

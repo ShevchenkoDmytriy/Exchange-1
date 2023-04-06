@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,8 +25,7 @@ namespace Exchange_1
         int check = 0;
         public MainWindow()
         {
-            InitializeComponent();
-
+            InitializeComponent();   
 
         }
 
@@ -304,7 +304,7 @@ namespace Exchange_1
             {
                 Lite.Visibility     = Visibility.Hidden;
                 Lite1.Visibility = Visibility.Visible;
-                MainMenu.Background = new SolidColorBrush(Color.FromRgb(24, 26, 32));
+                Panel.Background = new SolidColorBrush(Color.FromRgb(24, 26, 32));
                 Input.Foreground=new SolidColorBrush(Colors.White);
             }
         }
@@ -316,9 +316,12 @@ namespace Exchange_1
             {
                 Lite.Visibility = Visibility.Visible;
                 Lite1.Visibility = Visibility.Hidden;
-                MainMenu.Background = new SolidColorBrush(Colors.White);
+                Panel.Background = new SolidColorBrush(Colors.White);
                 Input.Foreground = new SolidColorBrush(Colors.Black);
+                
             }
         }
+
+
     }
 }
