@@ -295,6 +295,30 @@ namespace Exchange_1
                 Reg.Visibility = Visibility.Visible;
                 Money.Visibility = Visibility.Hidden;
             }
+        }   
+
+        private void Lite_Click(object sender, RoutedEventArgs e)
+        {
+            check = 1;
+            if(check==1)
+            {
+                Lite.Visibility     = Visibility.Hidden;
+                Lite1.Visibility = Visibility.Visible;
+                MainMenu.Background = new SolidColorBrush(Color.FromRgb(24, 26, 32));
+                Input.Foreground=new SolidColorBrush(Colors.White);
+            }
+        }
+
+        private void Lite1_Click(object sender, RoutedEventArgs e)
+        {
+            check = 0;
+            if (check == 0)
+            {
+                Lite.Visibility = Visibility.Visible;
+                Lite1.Visibility = Visibility.Hidden;
+                MainMenu.Background = new SolidColorBrush(Colors.White);
+                Input.Foreground = new SolidColorBrush(Colors.Black);
+            }
         }
     }
 }
