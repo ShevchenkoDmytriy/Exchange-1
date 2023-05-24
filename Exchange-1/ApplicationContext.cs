@@ -8,6 +8,6 @@ public class ApplicationContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(@"Data Source = HOME-PC; Initial Catalog = DataBase; Trusted_Connection=True; TrustServerCertificate=True");
+        optionsBuilder.UseSqlServer(@"Data Source = HOME-PC; Initial Catalog = Exchange; Trusted_Connection=True; TrustServerCertificate=True");
     }
 }
