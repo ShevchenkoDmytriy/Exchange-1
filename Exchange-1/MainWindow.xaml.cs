@@ -255,24 +255,6 @@ namespace Exchange_1
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-            //using (ApplicationContext db = new ApplicationContext())
-            //{
-            //    MainWindow window = new MainWindow();
-            //    string log = Convert.ToString(Enter.Text);
-            //    var users = db.Users.ToList();
-            //    foreach (Users u in users)
-            //    {
-            //        if (u.Gmail == log|| u.Num == log)
-            //        {
-            //            MessageBox.Show("Успішно");
-            //             Next.Visibility = Visibility.Hidden;
-            //            Next1.Visibility = Visibility.Visible;
-            //            change.Content = "Пароль";
-            //            Enter.Clear();
-            //        }
-            //    }
-
-            //}
             using (SqlConnection connection = new SqlConnection(connect))
             {
                 connection.Open();
@@ -330,28 +312,6 @@ namespace Exchange_1
 
         private void Next1_Click(object sender, RoutedEventArgs e)
         {
-            //using (ApplicationContext db = new ApplicationContext())
-            //{
-            //    MainWindow window = new MainWindow();
-            //    string log = Convert.ToString(Enter.Text);
-            //    var users = db.Users.ToList();
-            //    foreach (Users u in users)
-            //    {
-            //        if (u.Password == log)
-            //        {
-            //            def = 1;
-            //            if(def== 1) 
-            //            {
-            //                MessageBox.Show("Вхід успішний");
-            //                RegistrMenu.Visibility = Visibility.Hidden;
-            //                MainMenu.Visibility = Visibility.Visible;
-            //                but1.Visibility = Visibility.Hidden;
-            //                Input1.Visibility = Visibility.Visible;
-            //            }
-            //        }
-            //    }
-
-            //}
             using (SqlConnection connection = new SqlConnection(connect))
             {
                 connection.Open();
