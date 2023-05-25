@@ -25,7 +25,7 @@ namespace Exchange_1
         int def = 0;
         int check = 0;
         int f1 = 0;
-         string connect = @"Data Source = HOME-PC; Initial Catalog = Exchange; Trusted_Connection=True";
+        string connect = @"Data Source = HOME-PC; Initial Catalog = Exchange; Trusted_Connection=True";
         string sqlExpression = "SELECT * FROM Registr";
         public MainWindow()
         {
@@ -51,7 +51,6 @@ namespace Exchange_1
                 Money.Visibility = Visibility.Hidden;
             }
         }
-
         private void logo_Click(object sender, RoutedEventArgs e)
         {
             MainMenu.Visibility = Visibility.Visible;
