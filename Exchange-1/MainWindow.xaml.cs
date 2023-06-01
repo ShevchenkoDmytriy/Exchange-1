@@ -26,6 +26,7 @@ namespace Exchange_1
         int def = 0;
         int check = 0;
         int f1 = 0;
+        int id = 0;
         string connect = @"Data Source = HOME-PC; Initial Catalog = Exchange; Trusted_Connection=True";
         string sqlExpression = "SELECT * FROM Registr";
         public MainWindow()
